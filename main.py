@@ -6,9 +6,10 @@ from time import sleep
 import webbrowser
 
 url = "https://elgoog.im/t-rex/"
-# chrome_path = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-chrome_path = "/opt/google/chrome/chrome"
-dino_position = (116, 527)
+chrome_path = "C:/Program Files/Google/Chrome/Application/chrome.exe"
+# chrome_path = "/opt/google/chrome/chrome"
+# Use a free app to get the current position of the dino will be dependent on screen size
+dino_position = (120, 551)
 
 
 def start_browser(url):
@@ -32,7 +33,6 @@ def image_grab():
     )
     im = ImageOps.grayscale(hit_box)
     colours = np.array(im.getcolors())
-    print(np.sum(colours))
     return np.sum(colours)
 
 
